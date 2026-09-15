@@ -1,0 +1,266 @@
+/* Standing Order / Appcraft — shared site styling.
+   The game's language: charcoal metal, cyan player energy against coral hostile
+   energy, sharp technical panels lit from the upper left. No rounded corners
+   anywhere; the game's plates chamfer rather than round, and a rounded box here
+   reads as a different product. */
+
+:root{
+  --ink:#0B0E12;
+  --ink-2:#0F141A;
+  --panel:#141A22;
+  --panel-hi:#1A222B;
+  --line:#25333E;
+  --line-soft:#1B252E;
+  --text:#DAE3E9;
+  --dim:#8A99A5;
+  --faint:#5E6B76;
+  --cyan:#4DE2D8;
+  --cyan-dim:#2A8F8B;
+  --coral:#F2705F;
+  --amber:#E8B14C;
+  --shadow:rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--text);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-variant-numeric:tabular-nums;
+  padding:0 16px;
+  /* A faint technical grid, so the page sits on a surface rather than on a void. */
+  background-image:
+    linear-gradient(rgba(77,226,216,.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77,226,216,.028) 1px, transparent 1px);
+  background-size:64px 64px, 64px 64px;
+  background-attachment:fixed;
+}
+
+.wrap{max-width:760px; margin:0 auto; padding-block:0 80px}
+
+/* ---------------------------------------------------------------- type */
+
+h1{font-size:34px; line-height:1.14; letter-spacing:-.015em; margin:0 0 14px}
+h2{font-size:22px; line-height:1.25; letter-spacing:-.01em; margin:0 0 12px}
+h3{font-size:17px; line-height:1.35; margin:0 0 8px}
+p{margin:0 0 15px}
+ul{margin:0 0 15px; padding-left:20px}
+li{margin:0 0 9px}
+strong{color:#EDF3F7; font-weight:600}
+a{color:var(--cyan); text-decoration-color:var(--cyan-dim); text-underline-offset:3px}
+a:hover{color:#7BEDE5}
+
+.eyebrow{
+  font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--cyan); margin:0 0 10px; font-weight:600;
+}
+.eyebrow.hostile{color:var(--coral)}
+.lede{color:var(--dim); font-size:18px; margin:0 0 4px; max-width:54ch}
+.dim{color:var(--dim)}
+.small{font-size:14px}
+
+/* Section heading: a tracked label over a rule that fades out to the right,
+   the way the game's panel accents bleed in from an edge. */
+.section{
+  margin:52px 0 20px; padding-bottom:9px;
+  font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--cyan); font-weight:600;
+  border-bottom:1px solid transparent;
+  border-image:linear-gradient(90deg, var(--cyan-dim) 0%, var(--line) 45%, transparent 100%) 1;
+}
+
+/* ------------------------------------------------------------- masthead */
+
+.masthead{
+  position:relative; margin:0 -16px 0; padding:0 16px;
+  border-bottom:1px solid var(--line-soft);
+  background:linear-gradient(180deg, #10161D 0%, var(--ink) 100%);
+}
+.masthead .inner{max-width:760px; margin:0 auto; padding-block:22px 20px;
+                 display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+.brand{
+  font-size:12px; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--text); font-weight:700; text-decoration:none; margin-right:auto;
+}
+.brand span{color:var(--cyan)}
+
+/* Language control, built like the Forge's slot row: square segments, the
+   active one lit, a cyan underline pointing at what it selects. */
+.langs{display:flex; gap:0; border:1px solid var(--line); background:var(--ink-2)}
+.langs button{
+  appearance:none; background:transparent; border:0; cursor:pointer;
+  color:var(--faint); font:inherit; font-size:11px; font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase;
+  padding:9px 15px; min-height:38px; position:relative;
+}
+.langs button + button{border-left:1px solid var(--line)}
+.langs button[aria-pressed="true"]{color:var(--cyan); background:#101820}
+.langs button[aria-pressed="true"]::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--cyan);
+}
+.langs button:hover{color:var(--text)}
+
+/* ----------------------------------------------------------------- hero */
+
+.hero{position:relative; padding-block:44px 8px}
+.hero-grid{display:flex; gap:28px; align-items:center; flex-wrap:wrap}
+.hero-copy{flex:1 1 300px; min-width:0}
+.hero-art{flex:0 0 230px; margin-inline:auto; position:relative}
+.hero-art img{display:block; width:100%; height:auto;
+              filter:drop-shadow(0 22px 34px rgba(0,0,0,.65))}
+/* The machine stands on something rather than floating in the page. */
+.hero-art::after{
+  content:""; position:absolute; left:6%; right:6%; bottom:-10px; height:22px;
+  background:radial-gradient(ellipse at center, rgba(0,0,0,.72) 0%, transparent 72%);
+}
+
+/* Hazard band — the chevrons the game paints on load-bearing plate. */
+.hazard{
+  height:8px; margin:30px 0 0;
+  background:repeating-linear-gradient(-45deg,
+    var(--amber) 0 10px, #171208 10px 20px);
+  opacity:.5;
+}
+
+/* ---------------------------------------------------------------- panels */
+
+.panel{
+  position:relative;
+  background:linear-gradient(160deg, var(--panel-hi) 0%, var(--panel) 42%, var(--ink-2) 100%);
+  border:1px solid var(--line);
+  /* Lit on the top and left, dark on the bottom and right: one light source,
+     upper left, the same direction every plate on the mech is lit from. */
+  box-shadow:
+    inset 1px 1px 0 rgba(255,255,255,.055),
+    inset -1px -1px 0 rgba(0,0,0,.5),
+    0 12px 26px -18px var(--shadow);
+  padding:24px 26px;
+  margin:0 0 18px;
+}
+.panel > :last-child{margin-bottom:0}
+
+/* Two corner brackets, like the playback deck's frame. */
+.bracket::before,.bracket::after{
+  content:""; position:absolute; width:13px; height:13px; pointer-events:none;
+  border:1px solid var(--cyan); opacity:.75;
+}
+.bracket::before{top:-1px; left:-1px; border-right:0; border-bottom:0}
+.bracket::after{bottom:-1px; right:-1px; border-left:0; border-top:0}
+
+.panel.accent{border-left:2px solid var(--cyan)}
+.panel.accent-hostile{border-left:2px solid var(--coral)}
+
+/* The contact plate: the one thing on the support page that must be found. */
+.contact{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px; flex-wrap:wrap;
+}
+.contact .addr{
+  font-size:20px; font-weight:600; letter-spacing:.01em; word-break:break-all; margin:0;
+}
+.contact .addr a{text-decoration:none}
+.badge{
+  font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink); background:var(--cyan); padding:5px 10px; font-weight:700;
+}
+
+/* -------------------------------------------------------------- faq list */
+
+.faq{margin:0}
+.faq details{
+  border:1px solid var(--line); border-left:2px solid var(--line);
+  background:linear-gradient(160deg, var(--panel) 0%, var(--ink-2) 100%);
+  margin:0 0 10px; padding:0;
+}
+.faq details[open]{border-left-color:var(--cyan)}
+.faq summary{
+  cursor:pointer; list-style:none; padding:15px 18px; min-height:48px;
+  display:flex; align-items:center; gap:12px;
+  font-weight:600; color:var(--text);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{
+  content:"+"; color:var(--cyan); font-weight:700; font-size:17px;
+  width:14px; flex:0 0 14px; text-align:center;
+}
+.faq details[open] summary::before{content:"\2013"}
+.faq summary:hover{background:rgba(77,226,216,.045)}
+.faq .body{padding:0 18px 16px 44px; color:var(--dim)}
+.faq .body p:last-child{margin-bottom:0}
+
+/* ------------------------------------------------------------ data table */
+
+.rows{border:1px solid var(--line); background:var(--ink-2)}
+.rows .row{display:flex; gap:16px; padding:14px 18px; border-bottom:1px solid var(--line-soft)}
+.rows .row:last-child{border-bottom:0}
+.rows .who{
+  flex:0 0 190px; font-weight:600; color:var(--text); font-size:15px;
+}
+.rows .what{flex:1 1 240px; color:var(--dim); font-size:15px; min-width:0}
+@media (max-width:600px){
+  .rows .row{flex-direction:column; gap:5px}
+  .rows .who{flex:none}
+}
+
+/* ------------------------------------------------------------ game card */
+
+.game{display:flex; gap:26px; align-items:flex-start; flex-wrap:wrap}
+.game .shot{
+  flex:0 0 100%; margin:0 0 4px; border:1px solid var(--line); overflow:hidden;
+  position:relative; line-height:0;
+}
+.game .shot img{width:100%; height:auto; display:block; filter:saturate(1.02)}
+/* A scrim, because a photograph is otherwise the brightest thing on a page
+   whose subject is the text under it. */
+.game .shot::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(11,14,18,.34) 0%, rgba(11,14,18,.05) 40%, rgba(11,14,18,.86) 100%);
+}
+.game .copy{flex:1 1 280px; min-width:0}
+
+.links{display:flex; flex-wrap:wrap; gap:10px; margin:20px 0 0; padding:0; list-style:none}
+.links a{
+  display:inline-block; padding:11px 18px; min-height:44px; line-height:22px;
+  border:1px solid var(--line); background:var(--ink-2); color:var(--cyan);
+  text-decoration:none; font-size:14px; font-weight:600;
+  letter-spacing:.08em; text-transform:uppercase;
+}
+.links a:hover{border-color:var(--cyan); background:#101A20}
+.links a.primary{background:var(--cyan); color:#06211F; border-color:var(--cyan)}
+.links a.primary:hover{background:#7BEDE5}
+
+/* ---------------------------------------------------------------- footer */
+
+footer{
+  margin-top:64px; padding-top:22px; border-top:1px solid var(--line-soft);
+  color:var(--faint); font-size:13px;
+}
+footer a{color:var(--dim)}
+footer p{margin:0 0 6px}
+
+/* ------------------------------------------------------------- language */
+
+/* English is the default state, so the page is complete and readable even if
+   the toggle never runs.
+
+   Scoped under `body` deliberately: the toggle rewrites the `lang` attribute on
+   the <html> element too, and an unscoped `[lang="tr"]{display:none}` therefore
+   matches the root itself and blanks the entire page the moment Turkish is
+   selected. Only block-level containers carry a lang attribute, so restoring
+   them with `display:block` is safe. */
+body [lang="tr"]{display:none}
+html.tr body [lang="tr"]{display:block}
+html.tr body [lang="en"]{display:none}
+
+@media (max-width:560px){
+  h1{font-size:27px}
+  h2{font-size:20px}
+  .lede{font-size:17px}
+  .panel{padding:20px 18px}
+  .hero{padding-block:32px 4px}
+  .hero-art{flex-basis:190px}
+}

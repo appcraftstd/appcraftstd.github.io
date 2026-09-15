@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appcraft</title>
+<meta name="description" content="Appcraft makes Standing Order, a mech-building RPG for iOS and Android.">
+<meta name="theme-color" content="#0B0E12">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="masthead">
+  <div class="inner">
+    <a class="brand" href="./">App<span>craft</span></a>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent studio</p>
+        <h1 lang="en">We make one game,<br>carefully.</h1>
+        <h1 lang="tr">Tek bir oyun yapıyoruz,<br>özenle.</h1>
+        <p class="lede" lang="en">
+          Appcraft is a one-person studio. Everything below — the code, the art,
+          the writing and all ten translations — is made in house.
+        </p>
+        <p class="lede" lang="tr">
+          Appcraft tek kişilik bir stüdyo. Aşağıdaki her şey — kod, görseller,
+          metinler ve on dilin tamamı — burada üretiliyor.
+        </p>
+      </div>
+      <div class="hero-art">
+        <img src="mech.png" alt="The player's mech, standing." width="392" height="560">
+      </div>
+    </div>
+    <div class="hazard"></div>
+  </section>
+
+  <h2 class="section" lang="en">Our game</h2>
+  <h2 class="section" lang="tr">Oyunumuz</h2>
+
+  <div class="panel bracket">
+    <div class="game">
+      <div class="shot">
+        <img src="hall.jpg" alt="Two mechs facing each other in the duel hall." width="1200" height="657">
+      </div>
+      <div class="copy">
+        <p class="eyebrow hostile">iOS &amp; Android</p>
+        <h2>Standing Order</h2>
+
+        <p lang="en">
+          A standing order stays in force until somebody cancels it. The war ended
+          eleven years ago and nobody did, so every mech still out there is fighting
+          a war that is already over — and yours is the one that never received the
+          order in the first place.
+        </p>
+        <p lang="en">
+          Build a mech from four systems, walk ten chapters of foundries, and recover
+          what a lost survey pilot recorded before she went quiet. One hundred and
+          fifty missions, fifty opponents, twenty recordings.
+        </p>
+
+        <p lang="tr">
+          Bir daimî emir, biri iptal edene kadar yürürlükte kalır. Savaş on bir yıl
+          önce bitti ve kimse iptal etmedi; dışarıdaki her mech çoktan bitmiş bir
+          savaşı sürdürüyor — sizinki ise emri hiç almamış olan.
+        </p>
+        <p lang="tr">
+          Dört sistemden mech'inizi kurun, on bölümlük dökümhaneleri yürüyün ve
+          kaybolan keşif pilotunun susmadan önce kaydettiklerini geri getirin.
+          Yüz elli görev, elli rakip, yirmi kayıt.
+        </p>
+
+        <ul class="links">
+          <li lang="en"><a class="primary" href="standing-order/">Support</a></li>
+          <li lang="tr"><a class="primary" href="standing-order/">Destek</a></li>
+          <li lang="en"><a href="standing-order/privacy.html">Privacy policy</a></li>
+          <li lang="tr"><a href="standing-order/privacy.html">Gizlilik politikası</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section" lang="en">Contact</h2>
+  <h2 class="section" lang="tr">İletişim</h2>
+
+  <div class="panel accent">
+    <div class="contact">
+      <p class="addr"><a href="mailto:hi.appcraft@gmail.com">hi.appcraft@gmail.com</a></p>
+      <span class="badge" lang="en">We reply</span>
+      <span class="badge" lang="tr">Yanıtlıyoruz</span>
+    </div>
+    <p class="small dim" style="margin-top:12px" lang="en">
+      Questions, bug reports and press enquiries all reach the same inbox.
+    </p>
+    <p class="small dim" style="margin-top:12px" lang="tr">
+      Sorular, hata bildirimleri ve basın talepleri aynı adrese ulaşıyor.
+    </p>
+  </div>
+
+  <footer>
+    <p>2026 Appcraft</p>
+    <p lang="en">Standing Order and its artwork are the property of Appcraft.</p>
+    <p lang="tr">Standing Order ve görselleri Appcraft'a aittir.</p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll('.langs button');
+    function set(lang) {
+      root.classList.toggle('tr', lang === 'tr');
+      root.setAttribute('lang', lang);
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+      });
+      try { localStorage.setItem('appcraft.lang', lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { set(b.dataset.lang); });
+    });
+    var saved;
+    try { saved = localStorage.getItem('appcraft.lang'); } catch (e) {}
+    if (!saved && (navigator.language || '').toLowerCase().indexOf('tr') === 0) saved = 'tr';
+    if (saved === 'tr') set('tr');
+  })();
+</script>
+
+</body>
+</html>
