@@ -295,6 +295,80 @@ section.block{padding:clamp(88px, 12vw, 150px) 0; position:relative}
   .facts{grid-template-columns:repeat(2, auto)}
 }
 
+/* Store buttons, drawn rather than pasted so they sit in the page's type. */
+.stores{display:flex; gap:12px; flex-wrap:wrap}
+.store{
+  display:inline-flex; align-items:center; gap:12px; min-height:56px; padding:9px 20px 9px 16px;
+  border-radius:14px; text-decoration:none; color:#fff; background:#000;
+  border:1px solid rgba(255,255,255,.22);
+  transition:transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+}
+.store:hover{transform:translateY(-2px); border-color:rgba(255,255,255,.5); box-shadow:0 14px 40px -14px rgba(77,226,216,.45)}
+.store svg{width:24px; height:24px; flex:none}
+.store span{display:flex; flex-direction:column; font-size:19px; font-weight:700; line-height:1.05; letter-spacing:-.01em}
+.store small{font-size:10.5px; font-weight:600; letter-spacing:.02em; opacity:.8; margin-bottom:2px}
+.more{display:flex; gap:22px; margin:20px 0 0; font-size:14px; font-weight:600}
+.more a{color:var(--dim); text-decoration:none; border-bottom:1px solid var(--line-2); padding-bottom:2px; transition:color .2s, border-color .2s}
+.more a:hover{color:var(--text); border-color:var(--cyan)}
+
+/* Chroma: a neon night sky, and the game shown on three phones. */
+.feature.chroma{
+  grid-template-columns:.95fr 1.05fr;
+  background:
+    radial-gradient(60% 70% at 28% 50%, rgba(150,60,255,.35), transparent 70%),
+    radial-gradient(40% 50% at 85% 15%, rgba(60,220,255,.14), transparent 70%),
+    #07051A;
+  box-shadow:0 40px 120px -40px rgba(170,70,255,.4);
+}
+.feature.chroma::before{
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.7), transparent),
+    radial-gradient(1px 1px at 72% 34%, rgba(255,255,255,.55), transparent),
+    radial-gradient(1.5px 1.5px at 44% 82%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 58% 8%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 24% 64%, rgba(255,255,255,.45), transparent),
+    radial-gradient(1px 1px at 82% 90%, rgba(255,255,255,.5), transparent);
+}
+.feature.chroma .copy{justify-content:center}
+.game-head{display:flex; align-items:center; gap:16px; margin-bottom:20px}
+.game-head .tags{margin:0}
+.app-icon{width:64px; height:64px; border-radius:16px; flex:none; box-shadow:0 10px 30px -8px rgba(170,70,255,.6), 0 0 0 1px rgba(255,255,255,.12)}
+.game-title.neon{
+  background:linear-gradient(90deg, #C04BFF 0%, #4DE2F0 55%, #D9F23C 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter:drop-shadow(0 0 22px rgba(170,70,255,.45));
+}
+
+.phones{position:relative; min-height:560px; align-items:center; perspective:1200px}
+.phone{
+  position:absolute; left:50%; top:50%; margin:0; width:210px; aspect-ratio:9/20;
+  border-radius:34px; padding:7px; background:linear-gradient(160deg, #2A2540, #0C0A16);
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.1), inset 0 1px 0 rgba(255,255,255,.12);
+  transition:transform .8s var(--ease);
+}
+.feature .phones img{width:100%; height:100%; max-height:none; margin:0; object-fit:cover; border-radius:28px; display:block; filter:none; animation:none}
+.feature.chroma .art::after{background:radial-gradient(ellipse, rgba(170,70,255,.5), transparent 70%); bottom:40px}
+.phone.front{transform:translate(-50%,-50%); z-index:3; box-shadow:0 40px 80px -20px rgba(0,0,0,.85), 0 0 60px -10px rgba(170,70,255,.55), 0 0 0 1px rgba(255,255,255,.14)}
+.phone.back{width:180px; opacity:.85; z-index:1}
+.phone.left{transform:translate(-112%,-46%) rotate(-9deg)}
+.phone.right{transform:translate(12%,-46%) rotate(9deg)}
+.feature.chroma:hover .phone.left{transform:translate(-122%,-47%) rotate(-12deg)}
+.feature.chroma:hover .phone.right{transform:translate(22%,-47%) rotate(12deg)}
+
+@media (max-width:900px){
+  .feature.chroma{grid-template-columns:1fr}
+  .phones{min-height:400px; order:-1}
+  .phone{width:160px; border-radius:26px; padding:5px}
+  .feature .phones img{border-radius:22px}
+  .phone.back{width:136px}
+}
+@media (max-width:420px){
+  .phone{width:140px} .phone.back{width:116px}
+  .phones{min-height:350px}
+  .store{padding:8px 16px 8px 13px} .store span{font-size:17px}
+}
+
 .row-2{display:grid; grid-template-columns:1fr 1fr; gap:22px}
 @media (max-width:760px){.row-2{grid-template-columns:1fr}}
 
