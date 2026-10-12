@@ -1,140 +1,396 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Appcraft</title>
-<meta name="description" content="Appcraft makes Standing Order, a mech-building RPG for iOS and Android.">
-<meta name="theme-color" content="#0B0E12">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AppCraft — Independent Game Studio</title>
+<meta name="description" content="AppCraft is an independent game studio crafting mobile games for iOS and Android. Makers of Standing Order.">
+<meta name="theme-color" content="#06080C">
+<link rel="canonical" href="https://appcraftstd.github.io/">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AppCraft">
+<meta property="og:title" content="AppCraft — Independent Game Studio">
+<meta property="og:description" content="Small studio. Big worlds. Mobile games for iOS and Android, crafted entirely in house.">
+<meta property="og:url" content="https://appcraftstd.github.io/">
+<meta property="og:image" content="https://appcraftstd.github.io/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/studio.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AppCraft",
+  "url": "https://appcraftstd.github.io/",
+  "logo": "https://appcraftstd.github.io/assets/logo-mark.png",
+  "email": "hi.appcraft@gmail.com"
+}
+</script>
 </head>
 <body>
 
-<div class="masthead">
-  <div class="inner">
-    <a class="brand" href="./">App<span>craft</span></a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#games"><span lang="en">Skip to content</span><span lang="tr">İçeriğe geç</span></a>
+
+<header class="nav">
+  <div class="container">
+    <a class="logo" href="./" aria-label="AppCraft home">
+      <img src="assets/logo-mark.png" alt="" width="34" height="34">
+      <span>App<b>Craft</b></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#games"><span lang="en">Games</span><span lang="tr">Oyunlar</span></a></li>
+      <li><a href="#studio"><span lang="en">Studio</span><span lang="tr">Stüdyo</span></a></li>
+      <li><a href="#process"><span lang="en">Process</span><span lang="tr">Süreç</span></a></li>
+      <li><a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a></li>
+    </ul>
     <div class="langs" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="tr" aria-pressed="false">TR</button>
     </div>
   </div>
-</div>
+</header>
 
-<div class="wrap">
+<main>
 
+  <!-- ================================================================ hero -->
   <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Independent studio</p>
-        <h1 lang="en">We make one game,<br>carefully.</h1>
-        <h1 lang="tr">Tek bir oyun yapıyoruz,<br>özenle.</h1>
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="floor" aria-hidden="true"></div>
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <div class="hero-inner">
+        <p class="pill">
+          <span class="dot" aria-hidden="true"></span>
+          <span lang="en">Independent game studio · iOS &amp; Android</span>
+          <span lang="tr">Bağımsız oyun stüdyosu · iOS &amp; Android</span>
+        </p>
+
+        <h1 class="display" lang="en">
+          <span class="line">Small studio.</span>
+          <span class="line grad">Big worlds.</span>
+        </h1>
+        <h1 class="display" lang="tr">
+          <span class="line">Küçük stüdyo.</span>
+          <span class="line grad">Büyük dünyalar.</span>
+        </h1>
+
         <p class="lede" lang="en">
-          Appcraft is a one-person studio. Everything below — the code, the art,
-          the writing and all ten translations — is made in house.
+          AppCraft builds mobile games with the depth of a console title and the
+          polish of a handmade object — designed, coded, drawn and translated
+          entirely in house.
         </p>
         <p class="lede" lang="tr">
-          Appcraft tek kişilik bir stüdyo. Aşağıdaki her şey — kod, görseller,
-          metinler ve on dilin tamamı — burada üretiliyor.
+          AppCraft, konsol oyunlarının derinliğine ve el yapımı bir objenin
+          özenine sahip mobil oyunlar geliştiriyor — tasarımı, kodu, çizimi ve
+          çevirisiyle tamamen kendi bünyesinde.
         </p>
-      </div>
-      <div class="hero-art">
-        <img src="mech.png" alt="The player's mech, standing." width="392" height="560">
+
+        <div class="actions">
+          <a class="btn primary" href="#games">
+            <span lang="en">Explore our games</span><span lang="tr">Oyunlarımızı keşfedin</span>
+            <svg aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+          <a class="btn" href="#contact">
+            <span lang="en">Get in touch</span><span lang="tr">Bize ulaşın</span>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="hazard"></div>
+    <span class="scroll-cue" aria-hidden="true"></span>
   </section>
 
-  <h2 class="section" lang="en">Our game</h2>
-  <h2 class="section" lang="tr">Oyunumuz</h2>
+  <!-- ============================================================= marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <ul lang="en"><li>Handcrafted games</li><li><span class="keep">iOS</span></li><li>Android</li><li>Story first</li><li>Ten languages</li><li>No accounts</li><li>Made in house</li></ul>
+      <ul lang="en"><li>Handcrafted games</li><li><span class="keep">iOS</span></li><li>Android</li><li>Story first</li><li>Ten languages</li><li>No accounts</li><li>Made in house</li></ul>
+      <ul lang="tr"><li>El yapımı oyunlar</li><li><span class="keep">iOS</span></li><li>Android</li><li>Önce hikâye</li><li>On dil</li><li>Hesap yok</li><li>Kendi üretimimiz</li></ul>
+      <ul lang="tr"><li>El yapımı oyunlar</li><li><span class="keep">iOS</span></li><li>Android</li><li>Önce hikâye</li><li>On dil</li><li>Hesap yok</li><li>Kendi üretimimiz</li></ul>
+    </div>
+  </div>
 
-  <div class="panel bracket">
-    <div class="game">
-      <div class="shot">
-        <img src="hall.jpg" alt="Two mechs facing each other in the duel hall." width="1200" height="657">
+  <!-- =============================================================== games -->
+  <section class="block" id="games">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="reveal">
+          <p class="kicker"><span lang="en">01 — Games</span><span lang="tr">01 — Oyunlar</span></p>
+          <h2 class="h2" lang="en">Worlds worth<br>getting lost in.</h2>
+          <h2 class="h2" lang="tr">Kaybolmaya<br>değer dünyalar.</h2>
+        </div>
+        <div class="reveal" data-delay="1">
+          <p lang="en">
+            Every title gets the same treatment: a world with its own rules, a story
+            worth finishing, and controls that feel right under a thumb.
+          </p>
+          <p lang="tr">
+            Her oyunumuz aynı özeni görüyor: kendi kuralları olan bir dünya, sonuna
+            kadar oynanmaya değer bir hikâye ve başparmağın altında doğru hissettiren
+            kontroller.
+          </p>
+        </div>
       </div>
-      <div class="copy">
-        <p class="eyebrow hostile">iOS &amp; Android</p>
-        <h2>Standing Order</h2>
 
-        <p lang="en">
-          A standing order stays in force until somebody cancels it. The war ended
-          eleven years ago and nobody did, so every mech still out there is fighting
-          a war that is already over — and yours is the one that never received the
-          order in the first place.
-        </p>
-        <p lang="en">
-          Build a mech from four systems, walk ten chapters of foundries, and recover
-          what a lost survey pilot recorded before she went quiet. One hundred and
-          fifty missions, fifty opponents, twenty recordings.
-        </p>
+      <div class="games">
 
-        <p lang="tr">
-          Bir daimî emir, biri iptal edene kadar yürürlükte kalır. Savaş on bir yıl
-          önce bitti ve kimse iptal etmedi; dışarıdaki her mech çoktan bitmiş bir
-          savaşı sürdürüyor — sizinki ise emri hiç almamış olan.
-        </p>
-        <p lang="tr">
-          Dört sistemden mech'inizi kurun, on bölümlük dökümhaneleri yürüyün ve
-          kaybolan keşif pilotunun susmadan önce kaydettiklerini geri getirin.
-          Yüz elli görev, elli rakip, yirmi kayıt.
-        </p>
+        <!-- Featured game. To feature a new title, copy this <article> and
+             replace the image, text and links. -->
+        <article class="feature reveal" data-tilt>
+          <div class="bg"><img src="hall.jpg" alt="" width="1200" height="657" loading="lazy"></div>
+          <div class="copy">
+            <ul class="tags">
+              <li class="tag live keep">iOS &amp; Android</li>
+              <li class="tag"><span lang="en">Mech RPG</span><span lang="tr">Mech RYO</span></li>
+            </ul>
+            <h3 class="game-title">Standing Order</h3>
+            <p lang="en">
+              The war ended eleven years ago and nobody cancelled the order — so every
+              mech out there is still fighting it. Build a machine from four systems,
+              cross ten chapters of foundries, and recover what a lost survey pilot
+              recorded before she went quiet.
+            </p>
+            <p lang="tr">
+              Savaş on bir yıl önce bitti ama kimse emri iptal etmedi — dışarıdaki her
+              mech hâlâ savaşıyor. Dört sistemden makinenizi kurun, on bölümlük
+              dökümhaneleri aşın ve kaybolan keşif pilotunun susmadan önce
+              kaydettiklerini geri getirin.
+            </p>
+            <ul class="facts">
+              <li><b>150</b><span lang="en">Missions</span><span lang="tr">Görev</span></li>
+              <li><b>50</b><span lang="en">Opponents</span><span lang="tr">Rakip</span></li>
+              <li><b>10</b><span lang="en">Chapters</span><span lang="tr">Bölüm</span></li>
+              <li><b>10</b><span lang="en">Languages</span><span lang="tr">Dil</span></li>
+            </ul>
+            <div class="actions">
+              <!-- Store links go here once available, e.g.
+                   <a class="btn primary" href="https://apps.apple.com/...">App Store</a> -->
+              <a class="btn primary" href="standing-order/">
+                <span lang="en">Support &amp; FAQ</span><span lang="tr">Destek &amp; SSS</span>
+                <svg aria-hidden="true"><use href="#arrow"/></svg>
+              </a>
+              <a class="btn" href="standing-order/privacy.html">
+                <span lang="en">Privacy</span><span lang="tr">Gizlilik</span>
+              </a>
+            </div>
+          </div>
+          <div class="art">
+            <img src="mech.png" alt="The Standing Order mech" width="392" height="560" loading="lazy">
+          </div>
+        </article>
 
-        <ul class="links">
-          <li lang="en"><a class="primary" href="standing-order/">Support</a></li>
-          <li lang="tr"><a class="primary" href="standing-order/">Destek</a></li>
-          <li lang="en"><a href="standing-order/privacy.html">Privacy policy</a></li>
-          <li lang="tr"><a href="standing-order/privacy.html">Gizlilik politikası</a></li>
+        <div class="row-2">
+          <article class="card next reveal">
+            <div>
+              <p class="code">PROJECT_02</p>
+              <ul class="tags"><li class="tag dev"><span lang="en">In development</span><span lang="tr">Geliştiriliyor</span></li></ul>
+              <h3 lang="en">Something new is taking shape.</h3>
+              <h3 lang="tr">Yeni bir şey şekilleniyor.</h3>
+              <p lang="en">Details are classified for now. The announcement lands here first.</p>
+              <p lang="tr">Detaylar şimdilik gizli. Duyuru ilk olarak burada yapılacak.</p>
+            </div>
+            <div class="redact" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="glyph" aria-hidden="true">02</span>
+          </article>
+
+          <article class="card next reveal" data-delay="1">
+            <div>
+              <p class="code">PRESS_&amp;_CREATORS</p>
+              <h3 lang="en">Want an early look?</h3>
+              <h3 lang="tr">Erken bakmak ister misiniz?</h3>
+              <p lang="en">
+                Press, streamers and creators can request builds, art and
+                key information for any of our titles.
+              </p>
+              <p lang="tr">
+                Basın mensupları, yayıncılar ve içerik üreticileri oyunlarımız için
+                erken sürüm, görsel ve bilgi talep edebilir.
+              </p>
+            </div>
+            <a class="text-link" href="mailto:hi.appcraft@gmail.com?subject=Press%20%2F%20Creator%20request">
+              <span lang="en">Request a press kit</span><span lang="tr">Basın kiti iste</span>
+              <svg aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+            <span class="glyph" aria-hidden="true">+</span>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== studio -->
+  <section class="block" id="studio" style="padding-top:0">
+    <div class="container">
+
+      <div class="stats reveal">
+        <div class="stat"><div class="num"><span data-count="2">2</span></div><div class="label"><span lang="en">Platforms: iOS &amp; Android</span><span lang="tr">Platform: iOS &amp; Android</span></div></div>
+        <div class="stat"><div class="num"><span data-count="10">10</span></div><div class="label"><span lang="en">Languages supported</span><span lang="tr">Desteklenen dil</span></div></div>
+        <div class="stat"><div class="num"><span data-count="100">100</span><span>%</span></div><div class="label"><span lang="en">Made in house</span><span lang="tr">Kendi üretimimiz</span></div></div>
+        <div class="stat"><div class="num"><span>0</span></div><div class="label"><span lang="en">Accounts required</span><span lang="tr">Hesap gerekmez</span></div></div>
+      </div>
+
+      <div class="section-head" style="margin-top:clamp(88px, 12vw, 150px)">
+        <div class="reveal">
+          <p class="kicker"><span lang="en">02 — Studio</span><span lang="tr">02 — Stüdyo</span></p>
+          <h2 class="h2" lang="en">Built with craft,<br>not templates.</h2>
+          <h2 class="h2" lang="tr">Şablonla değil,<br>zanaatla.</h2>
+        </div>
+        <div class="reveal" data-delay="1">
+          <p lang="en">
+            AppCraft is an independent studio. Staying small means every
+            decision — from a weapon's recoil to a sentence in a briefing — is made
+            by someone who cares how it lands.
+          </p>
+          <p lang="tr">
+            AppCraft bağımsız bir stüdyo. Küçük kalmak, bir silahın geri tepmesinden
+            bir brifingteki cümleye kadar her kararın, sonucunu önemseyen biri
+            tarafından verilmesi demek.
+          </p>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.7 6.3 3 3M3 21l6.6-6.6M14 4l6 6-9.5 9.5-6-6z"/></svg></div>
+          <h3 lang="en">Handmade, end to end</h3><h3 lang="tr">Baştan sona el yapımı</h3>
+          <p lang="en">Code, art, writing and localisation all happen under one roof.</p>
+          <p lang="tr">Kod, görsel, metin ve yerelleştirme tek çatı altında üretiliyor.</p>
+        </article>
+        <article class="card reveal" data-delay="1">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3 lang="en">Private by default</h3><h3 lang="tr">Varsayılan olarak gizli</h3>
+          <p lang="en">No accounts, no sign-ins. Your progress lives on your device, not on our servers.</p>
+          <p lang="tr">Hesap yok, giriş yok. İlerlemeniz bizim sunucularımızda değil, cihazınızda.</p>
+        </article>
+        <article class="card reveal" data-delay="2">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-4 3.6L2 15a3 3 0 0 0 5.2 2.1L9 15h6l1.8 2.1A3 3 0 0 0 22 15l-.7-6.4a4 4 0 0 0-4-3.6z"/></svg></div>
+          <h3 lang="en">Fair to play</h3><h3 lang="tr">Adil oynanış</h3>
+          <p lang="en">Free to start, with ads that stay in their lane. Rewards are a bonus, never a wall.</p>
+          <p lang="tr">Ücretsiz başlarsınız; reklamlar yerini bilir. Ödüller bir bonus, asla bir duvar değil.</p>
+        </article>
+        <article class="card reveal" data-delay="3">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+          <h3 lang="en">Global from day one</h3><h3 lang="tr">İlk günden küresel</h3>
+          <p lang="en">Our games launch localised, so players everywhere get the whole story in their own language.</p>
+          <p lang="tr">Oyunlarımız yerelleştirilmiş çıkıyor; her oyuncu hikâyenin tamamını kendi dilinde yaşıyor.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= process -->
+  <section class="block" id="process" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <div class="reveal">
+          <p class="kicker"><span lang="en">03 — Process</span><span lang="tr">03 — Süreç</span></p>
+          <h2 class="h2" lang="en">From a spark<br>to your pocket.</h2>
+          <h2 class="h2" lang="tr">Bir kıvılcımdan<br>cebinize.</h2>
+        </div>
+        <div class="reveal" data-delay="1">
+          <p lang="en">Every game moves through the same four stages, and none of them end at launch.</p>
+          <p lang="tr">Her oyun aynı dört aşamadan geçiyor ve hiçbiri çıkışla bitmiyor.</p>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li class="reveal">
+          <h3 lang="en">Spark</h3><h3 lang="tr">Kıvılcım</h3>
+          <p lang="en">One strong idea, a world and a rule that makes it different.</p>
+          <p lang="tr">Güçlü bir fikir, bir dünya ve onu farklı kılan bir kural.</p>
+        </li>
+        <li class="reveal" data-delay="1">
+          <h3 lang="en">Prototype</h3><h3 lang="tr">Prototip</h3>
+          <p lang="en">We find the fun fast, and throw away whatever isn't.</p>
+          <p lang="tr">Eğlenceyi hızla buluyor, olmayanı cesurca atıyoruz.</p>
+        </li>
+        <li class="reveal" data-delay="2">
+          <h3 lang="en">Craft</h3><h3 lang="tr">Zanaat</h3>
+          <p lang="en">Art, story, balance and translation, polished until it feels inevitable.</p>
+          <p lang="tr">Görsel, hikâye, denge ve çeviri; kusursuz hissettirene kadar cilalanıyor.</p>
+        </li>
+        <li class="reveal" data-delay="3">
+          <h3 lang="en">Launch &amp; listen</h3><h3 lang="tr">Çıkış &amp; dinleme</h3>
+          <p lang="en">Every support email is read by a person, and updates follow what players tell us.</p>
+          <p lang="tr">Her destek e-postasını bir insan okuyor; güncellemeler oyuncuların söylediklerini izliyor.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================= contact -->
+  <section class="block" id="contact" style="padding-top:0">
+    <div class="container">
+      <div class="cta reveal">
+        <p class="kicker"><span lang="en">04 — Contact</span><span lang="tr">04 — İletişim</span></p>
+        <h2 class="h2" lang="en">Let's make something<br><span class="grad">worth playing.</span></h2>
+        <h2 class="h2" lang="tr">Oynamaya değer<br><span class="grad">bir şey yapalım.</span></h2>
+        <p lang="en">Players, press, publishers and partners — every message reaches the same inbox, and a person reads it.</p>
+        <p lang="tr">Oyuncular, basın, yayıncılar ve iş ortakları — tüm mesajlar aynı kutuya ulaşıyor ve bir insan okuyor.</p>
+        <a class="mail" href="mailto:hi.appcraft@gmail.com">hi.appcraft@gmail.com</a>
+        <div class="chips">
+          <a href="mailto:hi.appcraft@gmail.com?subject=Support"><span lang="en">Player support</span><span lang="tr">Oyuncu desteği</span></a>
+          <a href="mailto:hi.appcraft@gmail.com?subject=Press"><span lang="en">Press</span><span lang="tr">Basın</span></a>
+          <a href="mailto:hi.appcraft@gmail.com?subject=Business"><span lang="en">Business</span><span lang="tr">İş birliği</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div class="about">
+        <a class="logo" href="./" aria-label="AppCraft home">
+          <img src="assets/logo-mark.png" alt="" width="34" height="34">
+          <span>App<b>Craft</b></span>
+        </a>
+        <p lang="en">An independent game studio crafting mobile worlds for iOS and Android.</p>
+        <p lang="tr">iOS ve Android için mobil dünyalar üreten bağımsız bir oyun stüdyosu.</p>
+      </div>
+      <div>
+        <h4><span lang="en">Games</span><span lang="tr">Oyunlar</span></h4>
+        <ul>
+          <li><a href="standing-order/">Standing Order</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span lang="en">Studio</span><span lang="tr">Stüdyo</span></h4>
+        <ul>
+          <li><a href="#studio"><span lang="en">About</span><span lang="tr">Hakkımızda</span></a></li>
+          <li><a href="#process"><span lang="en">Process</span><span lang="tr">Süreç</span></a></li>
+          <li><a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span lang="en">Legal</span><span lang="tr">Yasal</span></h4>
+        <ul>
+          <li><a href="privacy.html"><span lang="en">Privacy policy</span><span lang="tr">Gizlilik politikası</span></a></li>
+          <li><a href="app-ads.txt">app-ads.txt</a></li>
         </ul>
       </div>
     </div>
-  </div>
-
-  <h2 class="section" lang="en">Contact</h2>
-  <h2 class="section" lang="tr">İletişim</h2>
-
-  <div class="panel accent">
-    <div class="contact">
-      <p class="addr"><a href="mailto:hi.appcraft@gmail.com">hi.appcraft@gmail.com</a></p>
-      <span class="badge" lang="en">We reply</span>
-      <span class="badge" lang="tr">Yanıtlıyoruz</span>
+    <div class="legal">
+      <p>© 2026 AppCraft</p>
+      <p lang="en">App Store is a trademark of Apple Inc. Google Play is a trademark of Google LLC.</p>
+      <p lang="tr">App Store, Apple Inc.'in; Google Play, Google LLC'nin ticari markasıdır.</p>
     </div>
-    <p class="small dim" style="margin-top:12px" lang="en">
-      Questions, bug reports and press enquiries all reach the same inbox.
-    </p>
-    <p class="small dim" style="margin-top:12px" lang="tr">
-      Sorular, hata bildirimleri ve basın talepleri aynı adrese ulaşıyor.
-    </p>
   </div>
+</footer>
 
-  <footer>
-    <p>2026 Appcraft</p>
-    <p lang="en">Standing Order and its artwork are the property of Appcraft.</p>
-    <p lang="tr">Standing Order ve görselleri Appcraft'a aittir.</p>
-  </footer>
-
-</div>
-
-<script>
-  (function () {
-    var root = document.documentElement;
-    var buttons = document.querySelectorAll('.langs button');
-    function set(lang) {
-      root.classList.toggle('tr', lang === 'tr');
-      root.setAttribute('lang', lang);
-      buttons.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
-      });
-      try { localStorage.setItem('appcraft.lang', lang); } catch (e) {}
-    }
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () { set(b.dataset.lang); });
-    });
-    var saved;
-    try { saved = localStorage.getItem('appcraft.lang'); } catch (e) {}
-    if (!saved && (navigator.language || '').toLowerCase().indexOf('tr') === 0) saved = 'tr';
-    if (saved === 'tr') set('tr');
-  })();
-</script>
-
+<script src="assets/site.js"></script>
 </body>
 </html>

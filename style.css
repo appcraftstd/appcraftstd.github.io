@@ -87,6 +87,8 @@ a:hover{color:#7BEDE5}
   color:var(--text); font-weight:700; text-decoration:none; margin-right:auto;
 }
 .brand span{color:var(--cyan)}
+.brand{display:inline-flex; align-items:center}
+.brand img{width:26px; height:26px; flex:none; margin-right:10px}
 
 /* Language control, built like the Forge's slot row: square segments, the
    active one lit, a cyan underline pointing at what it selects. */
