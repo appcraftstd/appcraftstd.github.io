@@ -448,6 +448,40 @@ section.block{padding:clamp(88px, 12vw, 150px) 0; position:relative}
   .phones.wide{min-height:290px}
 }
 
+/* ZERO: the game's own night navy with amber and teal glows; chrome title like
+   the in-game logo. Copy on the left, three portrait phones on the right. */
+.feature.zero{
+  grid-template-columns:1.05fr .95fr;
+  background:
+    radial-gradient(55% 65% at 74% 50%, rgba(245,185,74,.24), transparent 70%),
+    radial-gradient(45% 55% at 18% 18%, rgba(94,217,198,.16), transparent 70%),
+    #0A1124;
+  box-shadow:0 40px 120px -40px rgba(245,185,74,.32);
+}
+.feature.zero::before{
+  background-image:
+    radial-gradient(1px 1px at 12% 26%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 62% 14%, rgba(255,214,140,.55), transparent),
+    radial-gradient(1px 1px at 38% 82%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 90% 70%, rgba(170,240,230,.5), transparent);
+}
+.feature.zero .copy{justify-content:center}
+.feature.zero .app-icon{box-shadow:0 10px 30px -8px rgba(245,185,74,.55), 0 0 0 1px rgba(255,255,255,.12)}
+.game-title.chrome{
+  letter-spacing:.14em;
+  background:linear-gradient(180deg, #FFFFFF 0%, #D9E0EA 45%, #8C97A8 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter:drop-shadow(0 0 22px rgba(245,185,74,.35));
+}
+.feature.zero .art::after{background:radial-gradient(ellipse, rgba(245,185,74,.42), transparent 70%); bottom:40px}
+.feature.zero .phone{background:linear-gradient(160deg, #26324E, #0A0F1E)}
+.feature.zero .phone.front{box-shadow:0 40px 80px -20px rgba(0,0,0,.85), 0 0 60px -10px rgba(245,185,74,.45), 0 0 0 1px rgba(255,255,255,.14)}
+.feature.zero:hover .phone.left{transform:translate(-122%,-47%) rotate(-12deg)}
+.feature.zero:hover .phone.right{transform:translate(22%,-47%) rotate(12deg)}
+@media (max-width:900px){
+  .feature.zero{grid-template-columns:1fr}
+}
+
 .row-2{display:grid; grid-template-columns:1fr 1fr; gap:22px}
 @media (max-width:760px){.row-2{grid-template-columns:1fr}}
 
