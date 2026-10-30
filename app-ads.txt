@@ -1,3 +1,5 @@
+ownerdomain=appcraftgames.com
+
 # Google AdMob
 google.com, pub-7088096143232870, DIRECT, f08c47fec0942fa0
 
