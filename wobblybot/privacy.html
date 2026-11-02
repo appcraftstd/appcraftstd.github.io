@@ -47,7 +47,7 @@
       <p class="lede" lang="en">What Wobbly Bot collects, and what it does not.</p>
       <p class="lede" lang="tr">Wobbly Bot'un neleri topladığı ve neleri toplamadığı.</p>
       <ul class="tags meta">
-        <li class="tag live"><span lang="en">Effective 21 October 2026</span><span lang="tr">Yürürlük: 21 Ekim 2026</span></li>
+        <li class="tag live"><span lang="en">Effective 2 November 2026</span><span lang="tr">Yürürlük: 2 Kasım 2026</span></li>
         <li class="tag keep">iOS &amp; Android</li>
       </ul>
     </div>
@@ -87,8 +87,8 @@
           </div>
           <div class="card">
             <b lang="en">Ads &amp; Firebase</b><b lang="tr">Reklam &amp; Firebase</b>
-            <span lang="en">Google AdMob for ads; Firebase for analytics, crash reports and update checks.</span>
-            <span lang="tr">Reklamlar için Google AdMob; analiz, çökme raporu ve güncelleme kontrolü için Firebase.</span>
+            <span lang="en">Unity LevelPlay for ads (Unity Ads, ironSource and Google AdMob); Firebase for analytics, crash reports and update checks.</span>
+            <span lang="tr">Reklamlar için Unity LevelPlay (Unity Ads, ironSource ve Google AdMob); analiz, çökme raporu ve güncelleme kontrolü için Firebase.</span>
           </div>
         </div>
 
@@ -110,29 +110,33 @@
         <section id="services">
           <h2 lang="en">Third-party services</h2>
           <h2 lang="tr">Üçüncü taraf hizmetler</h2>
-          <p lang="en">Wobbly Bot uses the following Google services. Firebase services also use a Firebase installation ID, a random identifier for this copy of the app.</p>
-          <p lang="tr">Wobbly Bot aşağıdaki Google hizmetlerini kullanır. Firebase hizmetleri ayrıca uygulamanın bu kurulumuna ait rastgele bir tanımlayıcı olan Firebase kurulum kimliğini kullanır.</p>
+          <p lang="en">Wobbly Bot uses the following services. Firebase services also use a Firebase installation ID, a random identifier for this copy of the app.</p>
+          <p lang="tr">Wobbly Bot aşağıdaki hizmetleri kullanır. Firebase hizmetleri ayrıca uygulamanın bu kurulumuna ait rastgele bir tanımlayıcı olan Firebase kurulum kimliğini kullanır.</p>
           <div class="table" lang="en">
-            <div class="tr"><div>Google AdMob</div><div>Serves the rewarded and interstitial ads and receives technical information about your device in order to deliver and measure an ad. Ads are limited to content rated G (general audiences).</div></div>
+            <div class="tr"><div>Unity LevelPlay</div><div>Serves the rewarded and interstitial ads and receives technical information about your device in order to deliver and measure an ad. Each time an ad is needed it runs a quick auction among the ad networks below and shows the winning ad.</div></div>
+            <div class="tr"><div>ironSource Ads and Unity Ads</div><div>Ad networks run by Unity that bid in that auction and serve the winning ad. They receive device information, IP address (used for approximate location), ad interactions and the advertising ID (on iPhone and iPad only if you allow tracking).</div></div>
+            <div class="tr"><div>Google AdMob</div><div>Another ad network that can bid in the same auction; it receives the same kind of information when it serves an ad.</div></div>
             <div class="tr"><div>Firebase Crashlytics</div><div>Receives a report when the game crashes: the error and its stack trace, your device model and operating system version. Collected from released versions only.</div></div>
             <div class="tr"><div>Google Analytics for Firebase</div><div>Receives a small, fixed set of gameplay events so we can see where players stop: a level started, a level finished (with its stars and time), a run ended by a fall or by the Scrapper (with the distance reached), a life used, a rewarded ad completed, a paint unlocked. Your language is recorded as a property. None of it identifies you.</div></div>
-            <div class="tr"><div>Firebase Remote Config</div><div>Only used to check whether a newer version exists and to read game settings such as how often ads appear; it sends no gameplay data.</div></div>
+            <div class="tr"><div>Firebase Remote Config</div><div>Only used to check whether a newer version exists; it sends no gameplay data.</div></div>
           </div>
           <div class="table" lang="tr">
-            <div class="tr"><div>Google AdMob</div><div>Ödüllü ve geçiş reklamlarını sunar; reklamı gösterebilmek ve ölçebilmek için cihazınıza dair teknik bilgileri alır. Reklamlar G (genel izleyici) derecelendirmeli içerikle sınırlıdır.</div></div>
+            <div class="tr"><div>Unity LevelPlay</div><div>Ödüllü ve geçiş reklamlarını sunar; reklamı gösterebilmek ve ölçebilmek için cihazınıza dair teknik bilgileri alır. Her reklam gerektiğinde aşağıdaki reklam ağları arasında kısa bir açık artırma yapar ve kazanan reklamı gösterir.</div></div>
+            <div class="tr"><div>ironSource Ads ve Unity Ads</div><div>Unity'nin işlettiği, bu açık artırmaya katılan ve kazanan reklamı sunan reklam ağları. Cihaz bilgilerini, IP adresini (yaklaşık konum için), reklam etkileşimlerini ve reklam kimliğini (iPhone ve iPad'de yalnızca izlemeye izin verirseniz) alırlar.</div></div>
+            <div class="tr"><div>Google AdMob</div><div>Aynı açık artırmaya katılabilen bir başka reklam ağı; reklam sunduğunda aynı türden bilgileri alır.</div></div>
             <div class="tr"><div>Firebase Crashlytics</div><div>Oyun çöktüğünde bir rapor alır: hata ve yığın izi, cihaz modeliniz ve işletim sistemi sürümünüz. Yalnızca yayımlanmış sürümlerden toplanır.</div></div>
             <div class="tr"><div>Google Analytics for Firebase</div><div>Oyuncuların nerede bıraktığını görebilmemiz için küçük ve sabit bir olay kümesi alır: seviye başladı, seviye bitti (yıldızları ve süresiyle), deneme düşüşle ya da Hurdacı'ya yakalanarak bitti (ulaşılan mesafeyle), can kullanıldı, ödüllü reklam izlendi, boya açıldı. Diliniz özellik olarak kaydedilir. Hiçbiri sizi kimliklendirmez.</div></div>
-            <div class="tr"><div>Firebase Remote Config</div><div>Yalnızca daha yeni bir sürüm olup olmadığını kontrol etmek ve reklam sıklığı gibi oyun ayarlarını okumak için kullanılır; oynanışa dair veri göndermez.</div></div>
+            <div class="tr"><div>Firebase Remote Config</div><div>Yalnızca daha yeni bir sürüm olup olmadığını kontrol etmek için kullanılır; oynanışa dair veri göndermez.</div></div>
           </div>
-          <p lang="en">Google acts as an independent controller for advertising data and as our processor for Firebase. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a>, and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
-          <p lang="tr">Google, reklam verileri için bağımsız veri sorumlusu; Firebase için ise bizim adımıza veri işleyen olarak hareket eder. Ayrıntılar: <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a>, <a href="https://policies.google.com/technologies/partner-sites?hl=tr" target="_blank" rel="noopener">Google'ın, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullandığı</a> ve <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase'de Gizlilik ve Güvenlik</a>.</p>
+          <p lang="en">Unity Technologies, which owns LevelPlay, ironSource and Unity Ads, acts as an independent controller for the advertising data it receives; see the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Game Player and App User Privacy Policy</a>. Google acts as an independent controller for advertising data and as our processor for Firebase. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a>, and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
+          <p lang="tr">LevelPlay, ironSource ve Unity Ads'in sahibi Unity Technologies, aldığı reklam verileri için bağımsız veri sorumlusudur; ayrıntılar: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a>. Google, reklam verileri için bağımsız veri sorumlusu; Firebase için ise bizim adımıza veri işleyen olarak hareket eder. Ayrıntılar: <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a>, <a href="https://policies.google.com/technologies/partner-sites?hl=tr" target="_blank" rel="noopener">Google'ın, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullandığı</a> ve <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase'de Gizlilik ve Güvenlik</a>.</p>
         </section>
 
         <section id="tracking">
           <h2 lang="en">Consent &amp; tracking</h2>
           <h2 lang="tr">Rıza &amp; izleme</h2>
-          <p lang="en">Before any ad is requested, the game runs Google's consent check. Where the law requires it — for example in the EEA, the UK and Switzerland — Google's consent message is shown first, and ads are only requested once it allows. The app never presents Apple's App Tracking Transparency prompt, so on iPhone and iPad it does not receive your advertising identifier and cannot follow you across other companies' apps and websites.</p>
-          <p lang="tr">Herhangi bir reklam istenmeden önce oyun Google'ın rıza kontrolünü çalıştırır. Yasanın gerektirdiği yerlerde — örneğin AEA, Birleşik Krallık ve İsviçre'de — önce Google'ın rıza mesajı gösterilir ve reklamlar ancak buna izin verildikten sonra istenir. Uygulama, Apple'ın Uygulama İzleme Şeffaflığı penceresini hiç göstermez; bu nedenle iPhone ve iPad'de reklam tanımlayıcınızı almaz ve sizi başka şirketlerin uygulama ve sitelerinde takip edemez.</p>
+          <p lang="en">Before any ad is requested, the game runs Google's consent check. Where the law requires it — for example in the EEA, the UK and Switzerland — Google's consent message is shown first, and ads are only requested once it allows; your answer is passed to LevelPlay and to every ad network bidding through it. If the consent service cannot be reached and you have never answered, ads are shown without personalisation. On iPhone and iPad the game asks once, with Apple's App Tracking Transparency prompt, whether ads may use your advertising identifier (IDFA); if you decline, it is never shared and nothing tracks you across other companies' apps and websites. On Android, the ad networks may use your device's advertising ID unless you delete it in your device settings.</p>
+          <p lang="tr">Herhangi bir reklam istenmeden önce oyun Google'ın rıza kontrolünü çalıştırır. Yasanın gerektirdiği yerlerde — örneğin AEA, Birleşik Krallık ve İsviçre'de — önce Google'ın rıza mesajı gösterilir ve reklamlar ancak buna izin verildikten sonra istenir; yanıtınız LevelPlay'e ve onun üzerinden teklif veren her reklam ağına iletilir. Rıza hizmetine ulaşılamazsa ve daha önce hiç yanıt vermediyseniz reklamlar kişiselleştirilmeden gösterilir. iPhone ve iPad'de oyun, Apple'ın Uygulama İzleme Şeffaflığı penceresiyle reklamların reklam tanımlayıcınızı (IDFA) kullanıp kullanamayacağını bir kez sorar; reddederseniz tanımlayıcı hiçbir zaman paylaşılmaz ve sizi başka şirketlerin uygulama ve sitelerinde hiçbir şey izlemez. Android'de reklam ağları, cihaz ayarlarınızdan silmediğiniz sürece cihazınızın reklam kimliğini kullanabilir.</p>
         </section>
 
 
@@ -143,6 +147,7 @@
             <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking turns off tracking requests for all apps.</li>
             <li><strong>Android:</strong> Settings → Google → Ads (or Settings → Privacy → Ads) lets you delete your advertising ID.</li>
             <li>Manage Google ad personalisation at <a href="https://myadcenter.google.com" target="_blank" rel="noopener">My Ad Center</a>.</li>
+            <li>Unity's ads show a privacy button that lets you see the data Unity holds and opt out of personalised ads; see the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Game Player and App User Privacy Policy</a>.</li>
             <li>In the game, Settings → Privacy options reopens Google's consent message where it applies.</li>
             <li>Rewarded ads are always optional: they only give an extra life, and every level can be replayed from the start without watching one.</li>
             <li>Deleting the app removes all local game data from your device.</li>
@@ -151,6 +156,7 @@
             <li><strong>iOS:</strong> Ayarlar → Gizlilik ve Güvenlik → İzleme bölümünden tüm uygulamaların izleme isteklerini kapatabilirsiniz.</li>
             <li><strong>Android:</strong> Ayarlar → Google → Reklamlar (veya Ayarlar → Gizlilik → Reklamlar) bölümünden reklam kimliğinizi silebilirsiniz.</li>
             <li>Google reklam kişiselleştirmesini <a href="https://myadcenter.google.com" target="_blank" rel="noopener">Reklam Merkezim</a> üzerinden yönetebilirsiniz.</li>
+            <li>Unity reklamlarındaki gizlilik düğmesiyle Unity'nin tuttuğu verileri görebilir ve kişiselleştirilmiş reklamları kapatabilirsiniz; ayrıntılar: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a>.</li>
             <li>Gerekli olduğu bölgelerde oyunda Ayarlar → Gizlilik seçenekleri, Google'ın rıza mesajını yeniden açar.</li>
             <li>Ödüllü reklamlar her zaman isteğe bağlıdır: yalnızca ek can verir; her seviye hiç reklam izlemeden baştan oynanabilir.</li>
             <li>Uygulamayı silmek tüm yerel oyun verisini cihazınızdan kaldırır.</li>
@@ -174,8 +180,8 @@
         <section id="retention">
           <h2 lang="en">Retention &amp; transfers</h2>
           <h2 lang="tr">Saklama &amp; aktarım</h2>
-          <p lang="en">We keep no player data on servers of our own. Crashlytics keeps crash reports for 90 days; Analytics data is kept for the period set in our Firebase project and no longer than 14 months. Google may process data on servers outside your country, including in the United States, using safeguards such as the EU Standard Contractual Clauses. All connections are encrypted.</p>
-          <p lang="tr">Kendi sunucularımızda oyuncu verisi tutmayız. Crashlytics çökme raporlarını 90 gün saklar; Analytics verileri Firebase projemizde belirlenen süre boyunca ve en fazla 14 ay tutulur. Google verileri, AB Standart Sözleşme Maddeleri gibi güvencelerle, ABD dahil ülkeniz dışındaki sunucularda işleyebilir. Tüm bağlantılar şifrelidir.</p>
+          <p lang="en">We keep no player data on servers of our own. Crashlytics keeps crash reports for 90 days; Analytics data is kept for the period set in our Firebase project and no longer than 14 months. Unity and Google may process data on servers outside your country, including in the United States, using safeguards such as the EU Standard Contractual Clauses. All connections are encrypted.</p>
+          <p lang="tr">Kendi sunucularımızda oyuncu verisi tutmayız. Crashlytics çökme raporlarını 90 gün saklar; Analytics verileri Firebase projemizde belirlenen süre boyunca ve en fazla 14 ay tutulur. Unity ve Google verileri, AB Standart Sözleşme Maddeleri gibi güvencelerle, ABD dahil ülkeniz dışındaki sunucularda işleyebilir. Tüm bağlantılar şifrelidir.</p>
         </section>
 
         <section id="changes">
@@ -203,8 +209,8 @@
   <div class="container">
     <div class="legal" style="margin-top:0; padding-top:0; border-top:0">
       <p>© 2026 AppCraft · <a href="../"><span lang="en">Home</span><span lang="tr">Ana sayfa</span></a> · <a href="../privacy.html"><span lang="en">Privacy Center</span><span lang="tr">Gizlilik Merkezi</span></a></p>
-      <p lang="en">Wobbly Bot is not affiliated with Apple Inc. or Google LLC.</p>
-      <p lang="tr">Wobbly Bot'un Apple Inc. veya Google LLC ile bir bağlantısı yoktur.</p>
+      <p lang="en">Wobbly Bot is not affiliated with Apple Inc., Google LLC or Unity Technologies.</p>
+      <p lang="tr">Wobbly Bot'un Apple Inc., Google LLC veya Unity Technologies ile bir bağlantısı yoktur.</p>
     </div>
   </div>
 </footer>

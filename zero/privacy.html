@@ -47,7 +47,7 @@
       <p class="lede" lang="en">What ZERO collects, and what it does not.</p>
       <p class="lede" lang="tr">ZERO'nun neleri topladığı ve neleri toplamadığı.</p>
       <ul class="tags meta">
-        <li class="tag live"><span lang="en">Effective 26 October 2026</span><span lang="tr">Yürürlük: 26 Ekim 2026</span></li>
+        <li class="tag live"><span lang="en">Effective 2 November 2026</span><span lang="tr">Yürürlük: 2 Kasım 2026</span></li>
         <li class="tag keep">iOS &amp; Android</li>
       </ul>
     </div>
@@ -88,8 +88,8 @@
           </div>
           <div class="card">
             <b lang="en">Ads only</b><b lang="tr">Yalnızca reklam</b>
-            <span lang="en">Google AdMob for ads. No analytics, no crash reporting, no purchases.</span>
-            <span lang="tr">Reklamlar için Google AdMob. Analiz yok, çökme raporu yok, satın alma yok.</span>
+            <span lang="en">Unity LevelPlay for ads (Unity Ads, ironSource and Google AdMob). No analytics, no crash reporting, no purchases.</span>
+            <span lang="tr">Reklamlar için Unity LevelPlay (Unity Ads, ironSource ve Google AdMob). Analiz yok, çökme raporu yok, satın alma yok.</span>
           </div>
         </div>
 
@@ -112,20 +112,24 @@
         <section id="services">
           <h2 lang="en">Network &amp; third parties</h2>
           <h2 lang="tr">Ağ &amp; üçüncü taraflar</h2>
-          <p lang="en">ZERO has no servers of its own. It connects to the internet only for the following, all run by Google:</p>
-          <p lang="tr">ZERO'nun kendi sunucusu yoktur. İnternete yalnızca aşağıdakiler için bağlanır; hepsi Google tarafından işletilir:</p>
+          <p lang="en">ZERO has no servers of its own. It connects to the internet only for the following, run by Unity and Google:</p>
+          <p lang="tr">ZERO'nun kendi sunucusu yoktur. İnternete yalnızca aşağıdakiler için bağlanır; Unity ve Google tarafından işletilir:</p>
           <div class="table" lang="en">
-            <div class="tr"><div>Google AdMob</div><div>Serves the interstitial ads shown between some levels and the optional rewarded ads that give extra hints, and receives technical information about your device in order to deliver and measure an ad.</div></div>
+            <div class="tr"><div>Unity LevelPlay</div><div>Serves the interstitial ads shown between some levels and the optional rewarded ads that give extra hints, and receives technical information about your device in order to deliver and measure an ad. Each time an ad is needed it runs a quick auction among the ad networks below and shows the winning ad.</div></div>
+            <div class="tr"><div>ironSource Ads and Unity Ads</div><div>Ad networks run by Unity that bid in that auction and serve the winning ad. They receive device information, IP address (used for approximate location), ad interactions and the advertising ID (on iPhone and iPad only if you allow tracking).</div></div>
+            <div class="tr"><div>Google AdMob</div><div>Another ad network that can bid in the same auction; it receives the same kind of information when it serves an ad.</div></div>
             <div class="tr"><div>Google User Messaging Platform</div><div>Checks whether a consent message is required where you are and records your choice (see <a href="#tracking">Consent &amp; tracking</a>).</div></div>
             <div class="tr"><div>Time check</div><div>So that the daily puzzle and streak cannot be skipped by changing the device clock, the game asks www.google.com for the current time. This request contains no game data; like any web request, Google receives your IP address.</div></div>
           </div>
           <div class="table" lang="tr">
-            <div class="tr"><div>Google AdMob</div><div>Bazı bölümler arasında gösterilen geçiş reklamlarını ve ek ipucu veren isteğe bağlı ödüllü reklamları sunar; reklamı gösterebilmek ve ölçebilmek için cihazınıza dair teknik bilgileri alır.</div></div>
+            <div class="tr"><div>Unity LevelPlay</div><div>Bazı bölümler arasında gösterilen geçiş reklamlarını ve ek ipucu veren isteğe bağlı ödüllü reklamları sunar; reklamı gösterebilmek ve ölçebilmek için cihazınıza dair teknik bilgileri alır. Her reklam gerektiğinde aşağıdaki reklam ağları arasında kısa bir açık artırma yapar ve kazanan reklamı gösterir.</div></div>
+            <div class="tr"><div>ironSource Ads ve Unity Ads</div><div>Unity'nin işlettiği, bu açık artırmaya katılan ve kazanan reklamı sunan reklam ağları. Cihaz bilgilerini, IP adresini (yaklaşık konum için), reklam etkileşimlerini ve reklam kimliğini (iPhone ve iPad'de yalnızca izlemeye izin verirseniz) alırlar.</div></div>
+            <div class="tr"><div>Google AdMob</div><div>Aynı açık artırmaya katılabilen bir başka reklam ağı; reklam sunduğunda aynı türden bilgileri alır.</div></div>
             <div class="tr"><div>Google Kullanıcı Mesajlaşma Platformu</div><div>Bulunduğunuz yerde rıza mesajı gerekip gerekmediğini kontrol eder ve seçiminizi kaydeder (bkz. <a href="#tracking">Rıza &amp; izleme</a>).</div></div>
             <div class="tr"><div>Saat kontrolü</div><div>Günlük bulmaca ve seri, cihaz saati değiştirilerek atlanamasın diye oyun güncel saati www.google.com'dan sorar. Bu istek oyun verisi içermez; her web isteğinde olduğu gibi Google IP adresinizi alır.</div></div>
           </div>
-          <p lang="en">The game has no analytics, no crash reporting and no in-app purchases. Google acts as an independent controller for advertising data. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a>.</p>
-          <p lang="tr">Oyunda analiz, çökme raporu ve uygulama içi satın alma yoktur. Google, reklam verileri için bağımsız veri sorumlusu olarak hareket eder. Ayrıntılar: <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/partner-sites?hl=tr" target="_blank" rel="noopener">Google'ın, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullandığı</a>.</p>
+          <p lang="en">The game has no analytics, no crash reporting and no in-app purchases. Unity Technologies, which owns LevelPlay, ironSource and Unity Ads, acts as an independent controller for the advertising data it receives; see the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Game Player and App User Privacy Policy</a>. Google acts as an independent controller for advertising data. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a>.</p>
+          <p lang="tr">Oyunda analiz, çökme raporu ve uygulama içi satın alma yoktur. LevelPlay, ironSource ve Unity Ads'in sahibi Unity Technologies, aldığı reklam verileri için bağımsız veri sorumlusudur; ayrıntılar: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a>. Google, reklam verileri için bağımsız veri sorumlusu olarak hareket eder. Ayrıntılar: <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/partner-sites?hl=tr" target="_blank" rel="noopener">Google'ın, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullandığı</a>.</p>
         </section>
 
         <section id="notifications">
@@ -138,8 +142,8 @@
         <section id="tracking">
           <h2 lang="en">Consent &amp; tracking</h2>
           <h2 lang="tr">Rıza &amp; izleme</h2>
-          <p lang="en">Before any ad is requested, the game runs Google's consent check. Where the law requires it — for example in the EEA, the UK and Switzerland — Google's consent message is shown first, and ads are only requested once it allows. The app never presents Apple's App Tracking Transparency prompt, so on iPhone and iPad it does not receive your advertising identifier and cannot follow you across other companies' apps and websites.</p>
-          <p lang="tr">Herhangi bir reklam istenmeden önce oyun Google'ın rıza kontrolünü çalıştırır. Yasanın gerektirdiği yerlerde — örneğin AEA, Birleşik Krallık ve İsviçre'de — önce Google'ın rıza mesajı gösterilir ve reklamlar ancak buna izin verildikten sonra istenir. Uygulama, Apple'ın Uygulama İzleme Şeffaflığı penceresini hiç göstermez; bu nedenle iPhone ve iPad'de reklam tanımlayıcınızı almaz ve sizi başka şirketlerin uygulama ve sitelerinde takip edemez.</p>
+          <p lang="en">Before any ad is requested, the game runs Google's consent check. Where the law requires it — for example in the EEA, the UK and Switzerland — Google's consent message is shown first, and ads are only requested once it allows; your answer is passed to LevelPlay and to every ad network bidding through it. If the consent service cannot be reached and you have never answered, ads are shown without personalisation. On iPhone and iPad the game asks once, with Apple's App Tracking Transparency prompt, whether ads may use your advertising identifier (IDFA); if you decline, it is never shared and nothing tracks you across other companies' apps and websites. On Android, the ad networks may use your device's advertising ID unless you delete it in your device settings.</p>
+          <p lang="tr">Herhangi bir reklam istenmeden önce oyun Google'ın rıza kontrolünü çalıştırır. Yasanın gerektirdiği yerlerde — örneğin AEA, Birleşik Krallık ve İsviçre'de — önce Google'ın rıza mesajı gösterilir ve reklamlar ancak buna izin verildikten sonra istenir; yanıtınız LevelPlay'e ve onun üzerinden teklif veren her reklam ağına iletilir. Rıza hizmetine ulaşılamazsa ve daha önce hiç yanıt vermediyseniz reklamlar kişiselleştirilmeden gösterilir. iPhone ve iPad'de oyun, Apple'ın Uygulama İzleme Şeffaflığı penceresiyle reklamların reklam tanımlayıcınızı (IDFA) kullanıp kullanamayacağını bir kez sorar; reddederseniz tanımlayıcı hiçbir zaman paylaşılmaz ve sizi başka şirketlerin uygulama ve sitelerinde hiçbir şey izlemez. Android'de reklam ağları, cihaz ayarlarınızdan silmediğiniz sürece cihazınızın reklam kimliğini kullanabilir.</p>
         </section>
 
         <section id="choices">
@@ -151,6 +155,7 @@
             <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking turns off tracking requests for all apps.</li>
             <li><strong>Android:</strong> Settings → Google → Ads (or Settings → Privacy → Ads) lets you delete your advertising ID.</li>
             <li>Manage Google ad personalisation at <a href="https://myadcenter.google.com" target="_blank" rel="noopener">My Ad Center</a>.</li>
+            <li>Unity's ads show a privacy button that lets you see the data Unity holds and opt out of personalised ads; see the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Game Player and App User Privacy Policy</a>.</li>
             <li>Rewarded ads are always optional: they only give extra hints, and every puzzle can be solved without them.</li>
             <li>Deleting the app removes local game data from your device (see <a href="#device">above</a> for the iOS Keychain).</li>
           </ul>
@@ -160,6 +165,7 @@
             <li><strong>iOS:</strong> Ayarlar → Gizlilik ve Güvenlik → İzleme bölümünden tüm uygulamaların izleme isteklerini kapatabilirsiniz.</li>
             <li><strong>Android:</strong> Ayarlar → Google → Reklamlar (veya Ayarlar → Gizlilik → Reklamlar) bölümünden reklam kimliğinizi silebilirsiniz.</li>
             <li>Google reklam kişiselleştirmesini <a href="https://myadcenter.google.com" target="_blank" rel="noopener">Reklam Merkezim</a> üzerinden yönetebilirsiniz.</li>
+            <li>Unity reklamlarındaki gizlilik düğmesiyle Unity'nin tuttuğu verileri görebilir ve kişiselleştirilmiş reklamları kapatabilirsiniz; ayrıntılar: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a>.</li>
             <li>Ödüllü reklamlar her zaman isteğe bağlıdır: yalnızca ek ipucu verir; her bulmaca reklam izlemeden çözülebilir.</li>
             <li>Uygulamayı silmek yerel oyun verisini cihazınızdan kaldırır (iOS Anahtar Zinciri için <a href="#device">yukarıya</a> bakın).</li>
           </ul>
@@ -182,8 +188,8 @@
         <section id="retention">
           <h2 lang="en">Retention &amp; transfers</h2>
           <h2 lang="tr">Saklama &amp; aktarım</h2>
-          <p lang="en">We keep no player data on servers of our own. The local play record keeps only its most recent 500 events and 90 days of daily summaries; older entries are deleted. Google may process advertising data on servers outside your country, including in the United States, using safeguards such as the EU Standard Contractual Clauses. All connections are encrypted.</p>
-          <p lang="tr">Kendi sunucularımızda oyuncu verisi tutmayız. Yerel oyun kaydı yalnızca son 500 olayı ve 90 günlük özeti tutar; daha eskileri silinir. Google reklam verilerini, AB Standart Sözleşme Maddeleri gibi güvencelerle, ABD dahil ülkeniz dışındaki sunucularda işleyebilir. Tüm bağlantılar şifrelidir.</p>
+          <p lang="en">We keep no player data on servers of our own. The local play record keeps only its most recent 500 events and 90 days of daily summaries; older entries are deleted. Unity and Google may process advertising data on servers outside your country, including in the United States, using safeguards such as the EU Standard Contractual Clauses. All connections are encrypted.</p>
+          <p lang="tr">Kendi sunucularımızda oyuncu verisi tutmayız. Yerel oyun kaydı yalnızca son 500 olayı ve 90 günlük özeti tutar; daha eskileri silinir. Unity ve Google reklam verilerini, AB Standart Sözleşme Maddeleri gibi güvencelerle, ABD dahil ülkeniz dışındaki sunucularda işleyebilir. Tüm bağlantılar şifrelidir.</p>
         </section>
 
         <section id="changes">
@@ -211,8 +217,8 @@
   <div class="container">
     <div class="legal" style="margin-top:0; padding-top:0; border-top:0">
       <p>© 2026 AppCraft · <a href="../"><span lang="en">Home</span><span lang="tr">Ana sayfa</span></a> · <a href="../privacy.html"><span lang="en">Privacy Center</span><span lang="tr">Gizlilik Merkezi</span></a></p>
-      <p lang="en">ZERO is not affiliated with Apple Inc. or Google LLC.</p>
-      <p lang="tr">ZERO'nun Apple Inc. veya Google LLC ile bir bağlantısı yoktur.</p>
+      <p lang="en">ZERO is not affiliated with Apple Inc., Google LLC or Unity Technologies.</p>
+      <p lang="tr">ZERO'nun Apple Inc., Google LLC veya Unity Technologies ile bir bağlantısı yoktur.</p>
     </div>
   </div>
 </footer>
